@@ -56,7 +56,7 @@ public class AttractionController {
 	@GetMapping("/listMinHeight/{minHeightParam}")
 	public List<Attraction> listMinHeight(@PathVariable Integer minHeightParam){
 		
-		System.out.println("edad ingresada: " + minHeightParam);
+
 		List<Attraction> attractions = attractionService.listAttractions();
 		List<Attraction> attractionsFound = new ArrayList<>();
 		
@@ -71,5 +71,15 @@ public class AttractionController {
 		
 		return attractionsFound;
 	}
+	
+	@GetMapping("/listAvailable")
+	public List<Attraction> listAvailable(){
+		
+	
+		
+		return attractionService.listAttractions();
+	}
+	
+	
 	
 }

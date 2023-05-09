@@ -37,6 +37,9 @@ public class Attraction implements Serializable {
 
     @Column(name = "max_age")
     private Integer maxAge;
+    
+    @Column(name = "available")
+    private boolean available;
 
     public Attraction() {
 		// TODO Auto-generated constructor stub
@@ -97,6 +100,16 @@ public class Attraction implements Serializable {
 	public void setMaxAge(Integer maxAge) {
 		this.maxAge = maxAge;
 	}
+
+	public boolean isAvailable() {
+		return available;
+	}
+
+	public void setAvailable(boolean available) {
+		this.available = available;
+	}
+	
+	
    
     //@OneToMany(mappedBy = "attraction")
     //private List<Reservation> reservations;
